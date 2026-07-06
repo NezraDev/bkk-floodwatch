@@ -9,5 +9,3 @@ for all spatial/map views.
 npm install
 npm run dev
 ```
-
-## Project structure
