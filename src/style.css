@@ -1,0 +1,105 @@
+:root {
+  /* Brand */
+  --navy-900: #0b1c39;
+  --navy-800: #0f2648;
+  --navy-700: #16305a;
+  --blue-600: #1f5fbf;
+  --blue-500: #2d6fd6;
+
+  /* Surfaces */
+  --bg-app: #eef1f6;
+  --bg-card: #ffffff;
+  --border-subtle: #e3e8f0;
+
+  /* Text */
+  --text-primary: #0f1e3c;
+  --text-secondary: #5b6b85;
+  --text-muted: #8794a8;
+  --text-on-navy: #cdd8ea;
+  --text-on-navy-dim: #7f8fac;
+
+  /* Status */
+  --teal: #0f9488;
+  --green-500: #4caf50;
+  --yellow-500: #f5c518;
+  --orange-500: #ff9a2e;
+  --red-600: #e0392b;
+  --red-50: #fdecea;
+  --yellow-50: #fff8e1;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(15, 30, 60, 0.04), 0 1px 8px rgba(15, 30, 60, 0.06);
+  --shadow-pop: 0 8px 24px rgba(15, 30, 60, 0.12);
+
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --sidebar-w: 240px;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--blue-500);
+  color: white;
+}
+
+/* Focus visibility for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Leaflet tooltip used by the Water Level map's permanent level labels */
+.level-tip {
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--navy-900);
+  box-shadow: var(--shadow-card);
+}
+.level-tip::before {
+  border-top-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
